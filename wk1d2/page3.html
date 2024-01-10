@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My third web Page</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <!--container to wrap everthing-->
+    <div id="container">
+        <!--website brand-->
+        <header>My Webpage Brand</header>
+        <!--main navigation-->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="page2.html">About Us</a></li>
+                <li><a href="page3.html">Contact Us</a></li>
+                <li>Gallary</li>
+            </ul>
+        </nav>
+        <!--main content-->
+        <main>
+            <h1>My third Heading</h1>
+            <p>This is my third Paragraph of information</p>
+            <img src="central_park.jpg" alt="central_park winter" width="500">
+            <form action="/signup" method="post">
+                <fieldset>
+                    <legend>User personal information</legend>
+                    <label>Your full name</label><br>
+                    <input type="text" name="full_name"><br>
+                    <label>Your email address</label><br>
+                    <input type="email" name="email"><br>
+                    <label>Your phone number</label><br>
+                    <input type="text" name="phone"><br>
+                    <label>Your gender</label><br>
+                    <input type="radio" name="gender" value="male">Male<br>
+                    <input type="radio" name="gender" value="femail">Femail<br>
+                    <input type="radio" name="gender" value="other">Other<br>
+                    <label>How should we contact you</label><br>
+                    <select name="contact_method">
+                        <option>Email</option>
+                        <option>Phone</option>
+                        <option>Carrier pidgeon</option>
+                    </select><br>
+                    <label>What did you do today?</label><br>
+                    <textarea rows="5" columns="40"></textarea><br>
+                    <input type="submit" value="Sign Up"></input><br>
+                </fieldset>
+            </form>
+        </main>
+
+        <!--footer-->
+        <footer>&copy; Copyright 2023</footer>
+    </div>
+    <!--end container-->
+</body>
+
+</html>
