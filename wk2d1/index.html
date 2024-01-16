@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My branding Page</title>
+    <style>
+        header {
+            background: url(images/central_park.jpg) 0 -200px no-repeat;
+            /*Place image as background*/
+            background-size: 1500px;
+            height: 400px;
+            /*set header height*/
+            /* background position 0-200px */
+            /* background-repeat: no-repeat */
+            padding-top: 100px;
+            padding-left: 100px;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif
+        }
+
+        li {
+            list-style-type: none;
+            display: inline;
+            padding: 0 20px;
+        }
+
+        li a {
+            text-decoration: none;
+            /* remove underline */
+        }
+
+        li a:link {
+            color: #000;
+            /* before click */
+        }
+
+        li a:visited {
+            color: #818db3;
+            /* after click */
+        }
+
+        li a:hover {
+            columns: #333;
+            /* mouse over */
+        }
+
+        li a:active {
+            color: #753a30;
+            /* mouse down */
+        }
+
+        nav {
+            background-color: rgb(255, 245, 238);
+            /* uses red green blue */
+            height: 50px;
+            text-align: center;
+            padding-top: 2px;
+        }
+
+        main h1 {
+            color: rgb(129, 141, 179);
+            font-family: Arial;
+        }
+
+        footer {
+            height: 40px;
+            background-color: rgb(129, 141, 179);
+            text-align: center;
+            padding-top: 20px;
+            color: rgb(211, 218, 240);
+        }
+    </style>
+</head>
+
+<body>
+    <!--container to wrap everthing-->
+    <div id="container">
+        <!--website brand-->
+        <header style="font-size: 60px; color: #fff;">My Webpage Brand</header>
+        <!--main navigation-->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="page2.html">About Us</a></li>
+                <li><a href="page3.html">Contact Us</a></li>
+                <li>Gallary</li>
+            </ul>
+        </nav>
+        <!--main content-->
+        <main>
+            <h1>My First Heading</h1>
+            <p>This is my First Paragraph of information</p>
+        </main>
+
+        <!--footer-->
+        <footer>&copy; Copyright 2023</footer>
+    </div>
+    <!--end container-->
+</body>
+
+</html>
