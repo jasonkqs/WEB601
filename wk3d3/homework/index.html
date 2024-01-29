@@ -1,82 +1,121 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title >Great Cliff Page</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style.css">
+    <meta charset=utf-8 />
+    <title>Calculator</title>
     <style>
+        div {
+            margin: 40px;
+        }
     </style>
 </head>
-<body id="home">
-    <!--container to wrap everthing-->
-    <div id="container">
-        <header>
-            <div class="main-header">
-                <div class="logo" >
-                    <img src="images/logo.png" alt="Great Cliffs Logo" width="125">
-                </div>
-                <nav class="main-menu">
-                    <ul>
-                        <li class="active"><a href="index.html">Home</a></li>
-                        <li><a href="cliffs.html">Cliff</a></li>
-                        <li><a href="activities.html">Activities</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </nav> 
-            </div>
-        </header>
-        <!--main content-->
-        <section id = "timeofday">
-            <span>Your Current Local Time:</span>
-            <span id="clock"></span>
-        </section>
-        <div class = "main-container">
-        <main>
-            <div class="second-header">
-                <h2>Introducing California's Greatest Cliffs</h2>
-            </div>
-            <div class="third-header">
-                <h3>What is so unique about California cliffs?</h3>
-            </div>
-        <p>California cliffs are one of a kind in the United States 
-            where no cliffs are as magnificent and beautiful as them. 
-            And California is the only state that have cliffs that fronts 
-            all possible environments: sea, river, mountains and canyons. 
-            There are four such individual unique cliffs: West Cliff, North Cliff, 
-            East Cliff and South Cliff. All offer fantastic overlooking views, 
-            recreational areas, camping sites, wildlife watch spots and overnight 
-            cabins.
-        </p>
-        
 
-        <h3>Where are these cliffs?</h3>
-        <p>Located within a 100 mile radius from Irvine, California, they can be reached by roads easily. The closest cliff to Irvine is West Cliff, which is the most popular and most visited.</p>
-        
-            </div>
-        </main>
-        </div>
+<body>
 
-        <section>
-            <ul id="partners">
-            </ul>
-        </section>
-
-        <!--footer-->
-        <footer>
-            <div id="nondisclaimer">
-                <div class="copy"> &copy; Copyright 2023 :: GreatCliffs.com</div>
-                <div class="social">
-                    <a href="#" class="fa fa-facebook"></a>
-                    <a href="#" class="fa fa-instagram"></a>
-                    <a href="#" class="fa fa-twitter"></a>
-                </div>
-            </div>
-            <div id="disclaimer"><p>This website is designed and created solely for educational purposes only at Westcliff University. All contents are not intended for any commercial gain or use.</p></div>
-        </footer>
+    <div>
+        <label>Square this number:
+            <input type="number" id="square-input" size="2">
+        </label>
+        <button id="square-button">Calculate</button>
     </div>
+
+    <div>
+        <label>Half this number:
+            <input type="number" id="half-input" size="2">
+        </label>
+        <button id="half-button">Calculate</button>
     </div>
-    <!--end container-->
-    <script src="script.js"></script>
+
+    <div>
+        <label>
+            Fraction:
+            <input type="number" id="percent1-input" size="2">
+        </label>
+        <label>
+            Whole:
+            <input type="number" id="percent2-input" size="2">
+        </label>
+        <button id="percent-button">Calculate</button>
+    </div>
+
+    <div>
+        <label>
+            Integer:
+            <input type="number" id="int-input" size="2">
+        </label>
+        <button id="int-button">Calculate</button>
+    </div>
+
+    <div>
+        <label>Calculate area of circle with radius:
+            <input type="number" id="area-input" size="2">
+        </label>
+        <button id="area-button">Calculate</button>
+    </div>
+
+    <div id="solution"></div>
+
+
+    <script>
+
+        function squareNumber(num) {
+            var squaredNumber = num * num;
+            document.getElementById("solution").innerHTML = 'The result of squaring the number ' + num + ' is ' + squaredNumber;
+        }
+
+        function halfNumber(num) {
+            var half = num / 2;
+            document.getElementById("solution").innerHTML = 'Half of ' + num + ' is ' + half;
+        }
+
+        function percentOf(num1, num2) {
+            var percentOf = (num1 / 100) * num2;
+            document.getElementById("solution").innerHTML = percentOf + ' is ' + num1 + '% of ' + num2;
+        }
+
+        function findModulus(num) {
+            var modulus = num % 2;
+            document.getElementById("solution").innerHTML = 'The modulus of ' + num + ' is ' + modulus;
+        }
+
+        function calculateAreaOfCircle(radius) {
+            var area = Math.PI * radius * radius;
+            document.getElementById("solution").innerHTML = 'The area of a circle with radius ' + radius + ' is ' + area;
+        }
+
+        var squareButton = document.getElementById("square-button");
+        squareButton.addEventListener("click", function () {
+            var num = document.getElementById("square-input").value;
+            squareNumber(num);
+        });
+
+        var halfButton = document.getElementById("half-button");
+        halfButton.addEventListener("click", function () {
+            var num = document.getElementById("half-input").value;
+            halfNumber(num);
+        });
+
+        var percentButton = document.getElementById("percent-button");
+        percentButton.addEventListener("click", function () {
+            var num1 = document.getElementById("percent1-input").value;
+            var num2 = document.getElementById("percent2-input").value;
+            percentOf(num1, num2);
+        });
+
+        var intButton = document.getElementById("int-button");
+        intButton.addEventListener("click", function () {
+            var num = document.getElementById("int-input").value;
+            findModulus(num);
+        });
+
+        var areaButton = document.getElementById("area-button");
+        areaButton.addEventListener("click", function () {
+            var radius = document.getElementById("area-input").value;
+            calculateAreaOfCircle(radius);
+        });
+
+    </script>
 </body>
+
 </html>
